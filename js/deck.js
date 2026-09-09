@@ -161,7 +161,7 @@
           <h2 class="titulo anim" style="font-size:2.4cqi;margin-bottom:.3cqi">Marcas que confían en nosotros</h2>
           <div class="linea-v anim" style="margin:.8cqi 0 1.2cqi"></div>
           <div class="clientes-grid">
-            ${['holcim','elcorral','tacobell','camara','krispy','beerstation','bosch','eternit','rubbermaid','heinsohn','honda','papajohns','herbalife','ideas','carvajal','marykay','kare','hyundai','hocol'].map((l,i) => `<div class="cliente-card" style="--i:${i}"><img src="img/clientes/${l}.png" alt="${l}"></div>`).join('')}
+            ${['holcim','davivienda','nuam','liberty','elcorral','camara','krispy','beerstation','eternit','rubbermaid','heinsohn','honda','papajohns','herbalife','ideas','carvajal','marykay','kare','hyundai','hocol'].map((l,i) => `<div class="cliente-card" style="--i:${i}"><img src="img/clientes/${l}.png" alt="${l}"></div>`).join('')}
           </div>
         </div>`,
       story: { estrellas: true, html: `
@@ -169,7 +169,7 @@
         <h2 class="h-titulo h-anim" style="font-size:1.35rem">Marcas que confían en nosotros</h2>
         <div class="h-linea h-anim"></div>
         <div class="h-clientes h-anim">
-          ${['holcim','elcorral','tacobell','camara','krispy','beerstation','bosch','eternit','rubbermaid','heinsohn','honda','papajohns','herbalife','ideas','carvajal','marykay','kare','hyundai','hocol'].map(l => `<div class="h-cli"><img src="img/clientes/${l}.png" alt="${l}"></div>`).join('')}
+          ${['holcim','davivienda','nuam','liberty','elcorral','camara','krispy','beerstation','eternit','rubbermaid','heinsohn','honda','papajohns','herbalife','ideas','carvajal','marykay','kare','hyundai','hocol'].map(l => `<div class="h-cli"><img src="img/clientes/${l}.png" alt="${l}"></div>`).join('')}
         </div>` },
     },
 
