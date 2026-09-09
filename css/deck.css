@@ -215,8 +215,9 @@ button{font-family:inherit;cursor:pointer;border:none;background:none;color:inhe
 .inv-val b{font-size:1.02cqi;font-weight:600;color:var(--gris)}
 
 /* ---------- Simulador de pauta ---------- */
-.pauta-sim{display:flex;gap:4.5cqi;margin-top:3cqi;align-items:center;min-height:40cqi}
+.pauta-sim{display:flex;gap:4.5cqi;margin-top:3cqi;align-items:center}
 .ps-ctrl,.ps-out{flex:1;min-width:0}
+.s-pauta .lienzo{justify-content:center}
 .ps-field{margin-bottom:2.6cqi}
 .ps-lbl{font-size:1.5cqi;font-weight:800;color:#fff}
 .ps-lbl span{display:block;font-size:1.15cqi;font-weight:500;color:var(--gris-2);margin-top:.3cqi}
@@ -245,8 +246,40 @@ button{font-family:inherit;cursor:pointer;border:none;background:none;color:inhe
 .ps-row b{color:#fff;font-weight:800;white-space:nowrap}
 .ps-total{display:flex;justify-content:space-between;align-items:center;margin-top:2.2cqi;padding-top:1.8cqi;border-top:1px solid var(--linea);font-size:1.9cqi;font-weight:800;color:#fff}
 .ps-total b{color:var(--verde);font-size:2.6cqi}
-.ps-service{margin-top:1.8cqi;font-size:1.25cqi;color:var(--gris-2);line-height:1.45}
+.ps-service{margin-top:1.5cqi;font-size:1.2cqi;color:var(--gris-2);line-height:1.45}
 .ps-service .v{color:var(--verde)}
+.ps-titrow{display:flex;align-items:center;gap:1.6cqi}
+.ps-help{width:3.4cqi;height:3.4cqi;flex:none;border-radius:50%;border:1px solid rgba(57,255,20,.5);background:rgba(57,255,20,.1);color:var(--verde);font-size:1.9cqi;font-weight:800;cursor:pointer;display:grid;place-items:center;line-height:1;transition:background .15s ease,color .15s ease,transform .15s ease}
+.ps-help:hover{background:var(--verde);color:#000;transform:scale(1.08)}
+.ps-hint{font-size:1.15cqi;color:var(--gris-2);line-height:1.5;margin-top:1.4cqi;border-left:2px solid var(--linea);padding-left:1.2cqi}
+.ps-hint .ps-hintq{color:var(--verde);font-weight:800}
+.ps-fee{display:flex;justify-content:space-between;align-items:center;margin-top:1.6cqi;padding:1.2cqi 1.6cqi;background:rgba(57,255,20,.08);border:1px solid rgba(57,255,20,.32);border-radius:1cqi;font-size:1.35cqi;font-weight:700;color:#fff}
+.ps-fee i{font-style:normal;color:var(--gris-2);font-weight:400;font-size:1cqi;display:block;margin-top:.15cqi}
+.ps-fee b{color:var(--verde);font-size:1.9cqi;white-space:nowrap}
+.ps-alert{display:none;align-items:center;gap:1cqi;margin-top:1.1cqi;padding:1.1cqi 1.4cqi;background:rgba(255,207,58,.12);border:1px solid rgba(255,207,58,.5);border-radius:1cqi;font-size:1.12cqi;color:#ffe08a;line-height:1.35}
+.ps-alert.on{display:flex}
+.ps-alert svg{flex:none}
+.ps-alert b{color:#fff}
+.ps-out.tope{border-color:rgba(255,207,58,.45)}
+.ps-modal{position:fixed;inset:0;z-index:60;display:none;align-items:center;justify-content:center;background:rgba(0,0,0,.74);backdrop-filter:blur(4px);padding:5cqi}
+.ps-modal.abierto{display:flex}
+.ps-modal-card{position:relative;background:#131518;border:1px solid var(--linea);border-radius:2cqi;padding:3.4cqi 3.6cqi;max-width:78cqi;width:100%;box-shadow:0 4cqi 9cqi rgba(0,0,0,.6)}
+.ps-modal-x{position:absolute;top:2cqi;right:2cqi;width:3.2cqi;height:3.2cqi;border-radius:50%;border:1px solid var(--linea);background:var(--tarjeta);color:var(--gris);font-size:1.5cqi;cursor:pointer;display:grid;place-items:center}
+.ps-modal-x:hover{color:#fff;border-color:var(--verde)}
+.ps-modal-h{font-size:2.3cqi;font-weight:800;color:#fff;margin-bottom:2.2cqi}
+.ps-tables{display:grid;grid-template-columns:1fr 1fr;gap:3cqi}
+.ps-tt{font-size:1.35cqi;font-weight:800;color:var(--verde);text-transform:uppercase;letter-spacing:.03em;margin-bottom:1cqi}
+.ps-tt span{display:block;font-size:1.05cqi;font-weight:500;color:var(--gris-2);text-transform:none;letter-spacing:0;margin-top:.25cqi}
+.ps-table table{width:100%;border-collapse:collapse;font-size:1.35cqi}
+.ps-table th{background:var(--verde);color:#000;font-weight:800;text-align:left;padding:.8cqi 1.2cqi}
+.ps-table th:last-child{text-align:right}
+.ps-table td{padding:.75cqi 1.2cqi;color:#fff;border-bottom:1px solid var(--linea)}
+.ps-table td:last-child{text-align:right;font-weight:800;color:var(--verde)}
+.ps-table tbody tr:last-child td{border-bottom:none}
+.ps-table p{font-size:1.1cqi;color:var(--gris-2);line-height:1.45;margin-top:1cqi}
+.ps-table p b{color:#fff}
+.ps-modal-note{margin-top:2.2cqi;padding-top:1.8cqi;border-top:1px solid var(--linea);font-size:1.2cqi;color:var(--gris);line-height:1.45}
+.ps-modal-note b{color:var(--verde)}
 /* Simulador móvil */
 .ps-mob{display:block;margin-top:.6rem}
 .ps-mob .ps-lbl{font-size:.85rem}
@@ -266,6 +299,25 @@ button{font-family:inherit;cursor:pointer;border:none;background:none;color:inhe
 .ps-mob .ps-row em{font-size:.72rem}
 .ps-mob .ps-total{font-size:.95rem;margin-top:.8rem;padding-top:.7rem}
 .ps-mob .ps-total b{font-size:1.15rem}
+.ps-mtop{display:flex;align-items:center;justify-content:space-between;gap:.6rem}
+.panel-h .ps-help{width:2rem;height:2rem;font-size:1.05rem;flex:none}
+.ps-mob .ps-fee{display:flex;justify-content:space-between;align-items:center;margin-top:.8rem;padding:.55rem .8rem;background:rgba(57,255,20,.08);border:1px solid rgba(57,255,20,.32);border-radius:10px;font-size:.82rem;font-weight:700;color:#fff}
+.ps-mob .ps-fee i{font-style:normal;color:var(--gris-2);font-weight:400;font-size:.68rem;display:block}
+.ps-mob .ps-fee b{color:var(--verde);font-size:1.05rem;white-space:nowrap}
+.ps-mob .ps-alert{display:none;margin-top:.5rem;padding:.55rem .7rem;background:rgba(255,207,58,.12);border:1px solid rgba(255,207,58,.5);border-radius:10px;font-size:.74rem;color:#ffe08a;line-height:1.35}
+.ps-mob .ps-alert.on{display:block}
+.ps-mob .ps-alert b{color:#fff}
+.panel-h .ps-modal{position:fixed;padding:1.1rem}
+.panel-h .ps-modal-card{padding:1.4rem 1.2rem;border-radius:16px;max-width:none}
+.panel-h .ps-modal-x{width:2rem;height:2rem;font-size:1rem;top:.8rem;right:.8rem}
+.panel-h .ps-modal-h{font-size:1.15rem;margin-bottom:1rem}
+.panel-h .ps-tables{grid-template-columns:1fr;gap:1.2rem}
+.panel-h .ps-tt{font-size:.82rem}
+.panel-h .ps-tt span{font-size:.72rem}
+.panel-h .ps-table table{font-size:.84rem}
+.panel-h .ps-table th,.panel-h .ps-table td{padding:.42rem .6rem}
+.panel-h .ps-table p{font-size:.72rem}
+.panel-h .ps-modal-note{font-size:.76rem;margin-top:1rem;padding-top:.8rem}
 
 /* ---------- Ejemplos "como en redes": mockup Instagram/Facebook ---------- */
 .redes-split{display:grid;grid-template-columns:auto 1fr;gap:4cqi;align-items:center;margin-top:1.4cqi}
