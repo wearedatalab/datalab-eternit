@@ -124,6 +124,9 @@ button{font-family:inherit;cursor:pointer;border:none;background:none;color:inhe
 /* ---------- Quiénes somos ---------- */
 .s-quienes .sub{font-size:1.7cqi;line-height:1.45}
 .s-quienes .foto-panel{height:auto !important;max-height:64cqi}
+.s-quienes .sub{max-width:44cqi}
+.quienes-tags{display:flex;flex-wrap:wrap;gap:1cqi;margin-top:3.2cqi}
+.quienes-tags span{font-size:1.3cqi;font-weight:700;color:var(--verde);border:1px solid rgba(57,255,20,.35);background:rgba(57,255,20,.07);border-radius:99px;padding:.7cqi 1.7cqi}
 .logos-tira{display:flex;flex-wrap:wrap;gap:1cqi;align-items:center;margin-top:2.6cqi}
 .logo-chip{background:#fff;border-radius:.9cqi;height:4.4cqi;width:7.8cqi;display:grid;place-items:center;padding:.5cqi 1cqi;overflow:hidden;box-shadow:0 .4cqi 1.2cqi rgba(0,0,0,.3)}
 .logo-chip img{width:100%;height:100%;object-fit:contain;min-width:0;min-height:0}

@@ -88,8 +88,8 @@
               <h2 class="titulo anim" style="font-size:4.4cqi">Quiénes somos</h2>
               <div class="linea-v anim"></div>
               <p class="sub anim">Somos la agencia independiente líder de marketing y tecnología, enfocada en crecimiento basada en datos. Diseñamos e implementamos estrategias que optimizan la adquisición de clientes generando resultados reales al negocio.</p>
-              <div class="logos-tira anim">
-                ${['holcim','bosch','krispy','papajohns','elcorral','herbalife','honda','rubbermaid','hocol','kare'].map(l => `<span class="logo-chip"><img src="img/clientes/${l}.png" alt=""></span>`).join('')}
+              <div class="quienes-tags anim">
+                <span>Marketing</span><span>Tecnología</span><span>Data-driven</span>
               </div>
             </div>
             <div class="foto-panel anim" style="height:66cqi;align-self:center;background:radial-gradient(circle at 50% 42%, rgba(57,255,20,.12), transparent 68%)">
