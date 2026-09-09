@@ -124,17 +124,17 @@
               <p class="anim" style="font-size:1.2cqi;color:var(--gris-2);margin-top:2.4cqi;max-width:44cqi">Equipos disponibles en varias geografías para acompañamiento regional.</p>
             </div>
             <div class="pres-mapa anim">
-              <img src="img/mapa-siluta.png" class="mapa-sil" alt="">
-              <svg class="mapa-svg" viewBox="0 0 120 100" preserveAspectRatio="none">
-                <defs><filter id="nglow" x="-80%" y="-80%" width="260%" height="260%"><feGaussianBlur stdDeviation="1.1" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter></defs>
-                <path class="arco" d="M55,60 Q37,45 44,33"/>
-                <path class="arco" d="M55,60 Q41,51 38,50"/>
-                <path class="arco" d="M55,60 Q46,69 54,75"/>
-                <path class="arco" d="M55,60 Q49,80 66,90"/>
+              <img src="img/mapa-siluta.png" class="mapa-sil" alt="Mapa de América">
+              <svg class="mapa-svg" viewBox="0 0 92.1 100" preserveAspectRatio="none">
+                <defs><filter id="nglow" x="-90%" y="-90%" width="280%" height="280%"><feGaussianBlur stdDeviation="1" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter></defs>
+                <path class="arco" d="M48.3,54.5 Q34,42 33.6,29.8"/>
+                <path class="arco" d="M48.3,54.5 Q36,49.5 30.1,44"/>
+                <path class="arco" d="M48.3,54.5 Q43.5,61 46.2,66.5"/>
+                <path class="arco" d="M48.3,54.5 Q42,70 51.8,83.1"/>
                 <g filter="url(#nglow)">
-                  ${[[44,33],[38,50],[54,75],[66,90]].map(([x,y]) => `<circle class="nodo-ring" cx="${x}" cy="${y}" r="1.4"><animate attributeName="r" values="1.4;5.4;1.4" dur="2.9s" repeatCount="indefinite"/><animate attributeName="opacity" values=".7;0;.7" dur="2.9s" repeatCount="indefinite"/></circle><circle class="nodo-core" cx="${x}" cy="${y}" r="1.4"/>`).join('')}
-                  <circle class="nodo-ring hub" cx="55" cy="60" r="2"><animate attributeName="r" values="2;7;2" dur="2.9s" repeatCount="indefinite"/><animate attributeName="opacity" values=".8;0;.8" dur="2.9s" repeatCount="indefinite"/></circle>
-                  <circle class="nodo-core hub" cx="55" cy="60" r="2.1"/>
+                  ${[[33.6,29.8],[30.1,44],[46.2,66.5],[51.8,83.1]].map(([x,y]) => `<circle class="nodo-ring" cx="${x}" cy="${y}" r="1.3"><animate attributeName="r" values="1.3;4.7;1.3" dur="2.9s" repeatCount="indefinite"/><animate attributeName="opacity" values=".7;0;.7" dur="2.9s" repeatCount="indefinite"/></circle><circle class="nodo-core" cx="${x}" cy="${y}" r="1.3"/>`).join('')}
+                  <circle class="nodo-ring hub" cx="48.3" cy="54.5" r="1.9"><animate attributeName="r" values="1.9;6.2;1.9" dur="2.9s" repeatCount="indefinite"/><animate attributeName="opacity" values=".85;0;.85" dur="2.9s" repeatCount="indefinite"/></circle>
+                  <circle class="nodo-core hub" cx="48.3" cy="54.5" r="1.9"/>
                 </g>
               </svg>
             </div>
