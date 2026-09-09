@@ -337,7 +337,7 @@
         'Comparación honesta con la teja de barro: manto, madera, mantenimiento cada diez años.',
       ],
       claim: '«Uno está pa\' decirle lo mejor al cliente»: el maestro que recomienda Eternit porque sabe, no porque le pagan.',
-      video: 'video/reto1.mp4', poster: 'img/poster-reto1.jpg', badge: 'Video 1',
+      video: 'video/reto1.mp4', poster: 'img/reto1-c.jpg', hero: 'img/reto1-b.jpg', badge: 'Video 1',
     }),
 
     reto2: retoDeck({
@@ -353,7 +353,7 @@
         'El escéptico no es tonto: su experiencia con placa de yeso explica el malentendido y lo resuelve.',
       ],
       claim: 'Dos visiones de construcción frente a frente: el contraste convence más que cualquier argumento de catálogo.',
-      video: 'video/reto2.mp4', poster: 'img/poster-reto2.jpg', badge: 'Video 2',
+      video: 'video/reto2.mp4', poster: 'img/reto2-a.jpg', hero: 'img/reto2-b.jpg', badge: 'Video 2',
     }),
 
     reto3: retoDeck({
@@ -369,7 +369,7 @@
         'Beneficios verificados en la cartilla Eternit: sin metal por dentro, no se oxida, confort térmico y acústico.',
       ],
       claim: '«Cubiertas Eternit. Para no volver a empezar»: un techo que cambia la casa y la vida de quien la habita.',
-      video: 'video/reto3.mp4', poster: 'img/poster-reto3.jpg', badge: 'Video 3',
+      video: 'video/reto3.mp4', poster: 'img/reto3-a.jpg', hero: 'img/reto3-c.jpg', badge: 'Video 3',
     }),
 
     seccionEjemplos: {
@@ -718,11 +718,19 @@
         </div>
         <div class="barra-claim anim">${o.claim}</div>`,
       story: {
-        video: o.video, poster: o.poster, html: `
+        fondo: o.hero, html: `
         <span class="h-kicker h-anim">${o.kicker}</span>
-        <h2 class="h-titulo h-anim" style="font-size:1.8rem">${o.titulo}</h2>
-        <p class="h-quote h-anim">${o.quote}</p>
-        <p class="h-sub h-anim" style="font-size:.82rem;color:var(--gris-2)">${o.formato}</p>` },
+        <h2 class="h-titulo h-anim" style="font-size:1.6rem">${o.titulo}</h2>
+        <div class="h-fmt h-anim">${o.formato}</div>
+        <div class="h-video-card h-anim">
+          <div class="h-video" data-video><video src="${o.video}" poster="${o.poster}" playsinline preload="none"></video><button class="play" aria-label="Reproducir"><span class="circ">▶</span></button><span class="h-vbadge">${o.badge}</span></div>
+        </div>
+        <div class="h-lqc h-anim">El concepto</div>
+        <p class="h-concepto h-anim">${o.concepto}</p>
+        <div class="h-quote-box h-anim"><p class="h-quote">${o.quote}</p><span class="h-qa">${o.qa}</span></div>
+        <div class="h-lqc h-anim">Lo que ve el cliente</div>
+        <div class="h-lista h-anim">${o.checks.map(c => `<div class="h-item"><span>${c}</span></div>`).join('')}</div>
+        <div class="h-claim h-anim">${o.claim}</div>` },
     };
   }
 
