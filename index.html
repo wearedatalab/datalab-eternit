@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>DataLab · Eternit — Tres retos, tres historias</title>
+<meta name="theme-color" content="#0a0a0a">
+<meta name="description" content="Concepto creativo de DataLab para Eternit: tres videos generados con IA, tres formatos, una misma promesa: que se sienta real.">
+
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="DataLab · IN DATA WE TRUST">
+<meta property="og:title" content="Tres retos, tres historias — Propuesta DataLab para Eternit">
+<meta property="og:description" content="Tres videos generados con IA, tres formatos, una misma promesa: que el espectador olvide que fue hecho con IA. Toca para verla.">
+<meta property="og:image" content="https://wearedatalab.github.io/datalab-eternit/img/og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:locale" content="es_CO">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Tres retos, tres historias — DataLab para Eternit">
+<meta name="twitter:image" content="https://wearedatalab.github.io/datalab-eternit/img/og.jpg">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet" crossorigin="anonymous">
+<link rel="stylesheet" href="css/deck.css">
+</head>
+<body data-modo="desktop">
+
+<!-- Bienvenida -->
+<div class="carga" id="carga">
+  <div class="carga-inner">
+    <img class="carga-logo" src="img/logo-datalab.png" alt="DataLab">
+    <img class="carga-ast" src="img/astronauta.png" alt="">
+    <h1 class="carga-titulo">Tres retos, <span class="v">tres historias</span></h1>
+    <p class="carga-sub">Estamos preparando tu propuesta<span class="pts"><span>.</span><span>.</span><span>.</span></span></p>
+    <p class="carga-sub" id="carga-det" style="font-size:.85rem;color:var(--gris-2);margin-top:1.4rem;min-height:1.3em;transition:opacity .3s ease">Cargando las tres historias</p>
+    <div class="carga-barra"><span></span></div>
+  </div>
+</div>
+
+<!-- Deck desktop -->
+<div class="deck-escenario">
+  <div class="deck-marco" id="deck-marco">
+    <div class="deck-progreso"><span class="relleno" id="prog"></span></div>
+    <div class="deck-pie"><div class="puntos" id="puntos"></div></div>
+    <span class="contador" id="contador">01 / 22</span>
+  </div>
+</div>
+
+<!-- Historias móvil -->
+<div class="historias" id="historias"></div>
+
+<!-- Controles -->
+<button class="top-btn modo-toggle" id="modo-toggle">📱 Ver versión móvil</button>
+<button class="top-btn pdf-btn" id="pdf" title="Descargar la propuesta en PDF">📄 Descargar PDF</button>
+<button class="top-btn ayuda-btn" id="ayuda" title="¿Cómo navegar?">?</button>
+
+<div class="toast" id="toast"></div>
+
+<script src="js/deck.js"></script>
+</body>
+</html>

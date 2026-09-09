@@ -1,0 +1,8 @@
+# Fuentes de trabajo (PPT, renders, media, scripts, screenshots) — no se publican
+_fuentes/
+
+# Sistema
+.DS_Store
+Thumbs.db
+*.log
+node_modules/
