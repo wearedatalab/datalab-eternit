@@ -119,6 +119,7 @@ button{font-family:inherit;cursor:pointer;border:none;background:none;color:inhe
 .split.txt-img{grid-template-columns:1.05fr .95fr}
 .foto-panel{border-radius:2cqi;overflow:hidden;box-shadow:0 2cqi 6cqi rgba(0,0,0,.5);position:relative}
 .foto-panel img{width:100%;height:100%;object-fit:cover}
+.foto-panel video{width:100%;height:100%;display:block}
 
 /* ---------- Quiénes somos ---------- */
 .s-quienes .sub{font-size:1.7cqi;line-height:1.45}
@@ -205,6 +206,10 @@ button{font-family:inherit;cursor:pointer;border:none;background:none;color:inhe
 .tabla-roles td:first-child span{display:block;color:var(--gris-2);font-weight:400;font-size:.9cqi;margin-top:.15cqi}
 .tabla-roles td:nth-child(2),.tabla-roles td:last-child{text-align:center;font-weight:800;white-space:nowrap;color:var(--verde)}
 .tabla-roles tbody tr:last-child td{border-bottom:none}
+.inv-box{margin-top:1.2cqi;background:rgba(57,255,20,.1);border:1px solid rgba(57,255,20,.42);border-radius:1cqi;padding:.95cqi 1.4cqi;display:flex;align-items:center;justify-content:space-between;gap:1cqi}
+.inv-lbl{font-size:1.1cqi;font-weight:800;color:var(--verde);text-transform:uppercase;letter-spacing:.03em;line-height:1.15}
+.inv-val{font-size:1.85cqi;font-weight:800;color:#fff;white-space:nowrap}
+.inv-val b{font-size:1.02cqi;font-weight:600;color:var(--gris)}
 
 /* ---------- Ejemplos "como en redes": mockup Instagram/Facebook ---------- */
 .redes-split{display:grid;grid-template-columns:auto 1fr;gap:4cqi;align-items:center;margin-top:1.4cqi}
@@ -290,6 +295,8 @@ button{font-family:inherit;cursor:pointer;border:none;background:none;color:inhe
 .cliente-card{flex:0 0 calc((100% - 4 * 1cqi) / 5);height:8.2cqi;min-height:0;overflow:hidden;background:#fff;border-radius:1cqi;display:grid;place-items:center;padding:1cqi 1.7cqi;box-shadow:0 .8cqi 2cqi rgba(0,0,0,.4);transition:transform .24s cubic-bezier(.2,.7,.3,1), box-shadow .24s ease}
 .slide.activo .cliente-card:hover{transform:translateY(-9%) scale(1.035);box-shadow:0 1.8cqi 3.6cqi rgba(0,0,0,.55);z-index:5}
 .cliente-card img{width:100%;height:100%;object-fit:contain;min-width:0;min-height:0}
+@keyframes logoIn{0%{opacity:0;transform:translateY(3.4cqi) scale(.78)}62%{opacity:1;transform:translateY(-.6cqi) scale(1.045)}100%{opacity:1;transform:translateY(0) scale(1)}}
+.slide.activo .cliente-card{animation:logoIn .5s cubic-bezier(.2,.75,.3,1) backwards;animation-delay:calc(var(--i,0) * .038s)}
 .h-clientes{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:.4rem;margin-top:.5rem}
 .h-cli{background:#fff;border-radius:9px;height:48px;min-height:0;overflow:hidden;display:grid;place-items:center;padding:.34rem .5rem}
 .h-cli img{width:100%;height:100%;object-fit:contain;min-width:0;min-height:0}
@@ -499,6 +506,7 @@ body[data-modo="movil"] .ayuda-btn{left:auto;right:1rem;top:calc(5.4rem + env(sa
 }
 .slide.pdf-captura{opacity:1 !important;transform:none !important;transition:none !important;z-index:1}
 .slide.pdf-captura *{animation:none !important;transition:none !important}
+.slide.pdf-captura .anim,.slide.pdf-captura .cliente-card{opacity:1 !important;transform:none !important}
 .pdf-overlay{position:fixed;inset:0;z-index:230;background:rgba(0,0,0,.85);backdrop-filter:blur(8px);display:grid;place-items:center}
 .pdf-caja{display:flex;align-items:center;gap:1rem;background:var(--tarjeta);border:1px solid var(--linea);color:#fff;padding:1.2rem 1.8rem;border-radius:16px;font-size:.95rem}
 .pdf-spin{width:22px;height:22px;border:3px solid var(--linea);border-top-color:var(--verde);border-radius:50%;animation:gira .7s linear infinite}

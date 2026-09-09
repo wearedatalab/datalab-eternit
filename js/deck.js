@@ -92,8 +92,8 @@
                 ${['holcim','bosch','krispy','papajohns','elcorral','herbalife','honda','rubbermaid','hocol','kare'].map(l => `<span class="logo-chip"><img src="img/clientes/${l}.png" alt=""></span>`).join('')}
               </div>
             </div>
-            <div class="foto-panel anim" style="height:70cqi;align-self:center">
-              <img src="img/astronauta.png" alt="" style="object-fit:contain;background:radial-gradient(circle at 50% 40%, rgba(57,255,20,.10), transparent 70%)">
+            <div class="foto-panel anim" style="height:66cqi;align-self:center;background:radial-gradient(circle at 50% 42%, rgba(57,255,20,.12), transparent 68%)">
+              <video src="img/astronauta-loop.mp4" poster="img/astronauta-poster.jpg" muted loop autoplay playsinline data-igvideo style="object-fit:contain"></video>
             </div>
           </div>
         </div>
@@ -161,7 +161,7 @@
           <h2 class="titulo anim" style="font-size:2.4cqi;margin-bottom:.3cqi">Marcas que confían en nosotros</h2>
           <div class="linea-v anim" style="margin:.8cqi 0 1.2cqi"></div>
           <div class="clientes-grid">
-            ${['holcim','elcorral','tacobell','camara','krispy','beerstation','bosch','eternit','rubbermaid','heinsohn','honda','papajohns','herbalife','ideas','carvajal','marykay','kare','hyundai','hocol'].map(l => `<div class="cliente-card anim"><img src="img/clientes/${l}.png" alt="${l}"></div>`).join('')}
+            ${['holcim','elcorral','tacobell','camara','krispy','beerstation','bosch','eternit','rubbermaid','heinsohn','honda','papajohns','herbalife','ideas','carvajal','marykay','kare','hyundai','hocol'].map((l,i) => `<div class="cliente-card" style="--i:${i}"><img src="img/clientes/${l}.png" alt="${l}"></div>`).join('')}
           </div>
         </div>`,
       story: { estrellas: true, html: `
@@ -429,6 +429,7 @@
                   <tr><td>Community Manager</td><td>50 %</td><td>80 h</td></tr>
                 </tbody>
               </table>
+              <div class="inv-box anim"><span class="inv-lbl">Inversión mensual del servicio</span><span class="inv-val">$8.000.000 <b>COP / mes</b> + IVA</span></div>
               <div class="regla-nota">Horas calculadas sobre una base de 160 horas al mes por persona. Las horas no consumidas no se acumulan.</div>
               <div class="regla-nota" style="border-left:.3cqi solid var(--verde);padding-left:1cqi;color:var(--gris)">Las <b style="color:#fff">reuniones internas y el seguimiento del equipo</b> también hacen parte del consumo del tiempo mensual.</div>
             </div>
