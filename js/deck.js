@@ -502,6 +502,66 @@
         </div>` },
     },
 
+    pauta: {
+      deck: `
+        <div class="cabecera"><div class="kicker anim">Pauta digital · Cómo funciona el fee</div><img class="logo-dl" src="${LOGO}" alt=""></div>
+        <div class="lienzo" style="padding-top:6cqi">
+          <h2 class="titulo anim" style="font-size:3cqi">Simulador de pauta: mueve tu inversión</h2>
+          <div class="linea-v anim" style="margin:.8cqi 0 1.4cqi"></div>
+          <div class="pauta-sim" data-pauta>
+            <div class="ps-ctrl anim">
+              <div class="ps-field">
+                <div class="ps-lbl">Inversión mensual en pauta <span>lo que se pauta en los canales</span></div>
+                <div class="ps-val"><b class="ps-monto">$8.000.000</b> COP / mes</div>
+                <input type="range" class="ps-slider" min="8000000" max="60000000" step="500000" value="8000000" aria-label="Inversión en pauta">
+                <div class="ps-minmax"><span>Mínimo $8M</span><span>$60M</span></div>
+              </div>
+              <div class="ps-field">
+                <div class="ps-lbl">Canales activos <span>el fee de administración sube con más canales</span></div>
+                <div class="ps-canales"><button class="ps-chan activo" data-chan>Meta</button><button class="ps-chan" data-chan>Google</button><button class="ps-chan" data-chan>TikTok</button></div>
+              </div>
+              <div class="ps-legend">
+                <p><b>Administración:</b> 6% (1 canal) · 10% (2) · 15% (3) — tope $8M/mes.</p>
+                <p><b>Uso de tarjeta</b> (financiamos la pauta, se paga a 30 días): 7% hasta $10M · 6% de $10M a $30M · 5% desde $30M.</p>
+              </div>
+            </div>
+            <div class="ps-out anim">
+              <div class="ps-bar"><span class="psb-medios"></span><span class="psb-admin"></span><span class="psb-card"></span></div>
+              <div class="ps-rows">
+                <div class="ps-row"><span class="ps-dot medios"></span><span class="ps-name">A los canales <i>Meta / Google / TikTok</i></span><b class="ps-medios">$8.000.000</b></div>
+                <div class="ps-row"><span class="ps-dot admin"></span><span class="ps-name">Administración de pauta <em class="ps-adminpct"></em></span><b class="ps-admin"></b></div>
+                <div class="ps-row"><span class="ps-dot card"></span><span class="ps-name">Uso de tarjeta <em class="ps-cardpct"></em></span><b class="ps-card"></b></div>
+              </div>
+              <div class="ps-total"><span>Total de pauta / mes</span><b class="ps-totalv"></b></div>
+              <div class="ps-service">Aparte va el <b style="color:#fff">fee de manejo de redes</b> (servicio): <b class="v">$8.000.000 / mes</b> — no hace parte de la pauta.</div>
+            </div>
+          </div>
+        </div>`,
+      story: { estrellas: true, html: `
+        <span class="h-kicker h-anim">Pauta digital · Simulador</span>
+        <h2 class="h-titulo h-anim" style="font-size:1.5rem">Mueve tu inversión y mira los costos</h2>
+        <div class="pauta-sim ps-mob h-anim" data-pauta>
+          <div class="ps-field">
+            <div class="ps-lbl">Inversión mensual en pauta</div>
+            <div class="ps-val"><b class="ps-monto">$8.000.000</b> COP/mes</div>
+            <input type="range" class="ps-slider" min="8000000" max="60000000" step="500000" value="8000000" aria-label="Inversión en pauta">
+            <div class="ps-minmax"><span>Mín $8M</span><span>$60M</span></div>
+          </div>
+          <div class="ps-field">
+            <div class="ps-lbl">Canales activos</div>
+            <div class="ps-canales"><button class="ps-chan activo" data-chan>Meta</button><button class="ps-chan" data-chan>Google</button><button class="ps-chan" data-chan>TikTok</button></div>
+          </div>
+          <div class="ps-bar"><span class="psb-medios"></span><span class="psb-admin"></span><span class="psb-card"></span></div>
+          <div class="ps-rows">
+            <div class="ps-row"><span class="ps-dot medios"></span><span class="ps-name">A los canales</span><b class="ps-medios"></b></div>
+            <div class="ps-row"><span class="ps-dot admin"></span><span class="ps-name">Administración <em class="ps-adminpct"></em></span><b class="ps-admin"></b></div>
+            <div class="ps-row"><span class="ps-dot card"></span><span class="ps-name">Uso de tarjeta <em class="ps-cardpct"></em></span><b class="ps-card"></b></div>
+          </div>
+          <div class="ps-total"><span>Total de pauta / mes</span><b class="ps-totalv"></b></div>
+        </div>
+        <p class="h-nota h-anim" style="margin-top:.5rem">Aparte: fee de manejo de redes $8.000.000/mes · inversión mínima $8M/mes.</p>` },
+    },
+
     tiempos: {
       deck: `
         <div class="cabecera"><div class="kicker anim">Cómo se consumen las horas del equipo</div><img class="logo-dl" src="${LOGO}" alt=""></div>
@@ -735,7 +795,7 @@
     };
   }
 
-  const ORDEN = ['portada', 'weare', 'quienes', 'presencia', 'clientes', 'agencia360', 'agilidad', 'acreditados', 'caso', 'concepto', 'idea', 'reto1', 'reto2', 'reto3', 'seccionEjemplos', 'ejemplos', 'ejemploCarrusel', 'ejemploVideo', 'seccion02', 'alcance', 'tiempos', 'cierre'];
+  const ORDEN = ['portada', 'weare', 'quienes', 'presencia', 'clientes', 'agencia360', 'agilidad', 'acreditados', 'caso', 'concepto', 'idea', 'reto1', 'reto2', 'reto3', 'seccionEjemplos', 'ejemplos', 'ejemploCarrusel', 'ejemploVideo', 'seccion02', 'alcance', 'pauta', 'tiempos', 'cierre'];
   const slides = ORDEN.filter(id => DEFS[id]);
 
   /* ============================================================
@@ -782,7 +842,7 @@
 
   marco.addEventListener('click', (e) => {
     if (document.body.dataset.modo !== 'desktop') return;
-    if (e.target.closest('a,button,video,.video-reto,.puntos')) return;
+    if (e.target.closest('a,button,video,.video-reto,.puntos,input,.pauta-sim')) return;
     const r = marco.getBoundingClientRect();
     irA((e.clientX - r.left) < r.width * 0.18 ? idx - 1 : idx + 1);
   });
@@ -796,6 +856,7 @@
 
   document.addEventListener('keydown', (e) => {
     if (document.body.dataset.modo !== 'desktop') return;
+    if (e.target.tagName === 'INPUT') return;
     if (e.key === ' ' && (e.target.tagName === 'VIDEO' || marco.querySelector('.slide.activo [data-video].reproduciendo'))) return;
     if (e.key === 'ArrowRight' || e.key === ' ' || e.key === 'PageDown') { e.preventDefault(); irA(idx + 1); }
     if (e.key === 'ArrowLeft' || e.key === 'PageUp') { e.preventDefault(); irA(idx - 1); }
@@ -870,7 +931,7 @@
   cont.appendChild(firma);
 
   let tx = null, ty = null;
-  cont.addEventListener('touchstart', (e) => { tx = e.touches[0].clientX; ty = e.touches[0].clientY; }, { passive: true });
+  cont.addEventListener('touchstart', (e) => { if (e.target.closest('.pauta-sim,input,button')) { tx = null; return; } tx = e.touches[0].clientX; ty = e.touches[0].clientY; }, { passive: true });
   cont.addEventListener('touchend', (e) => {
     if (tx === null) return;
     const dx = e.changedTouches[0].clientX - tx, dy = e.changedTouches[0].clientY - ty;
@@ -1049,6 +1110,42 @@
     e.stopPropagation();
     if (v.paused) v.play().catch(() => {}); else v.pause();
   }));
+
+  /* ---------- Simulador de pauta ---------- */
+  const copFmt = new Intl.NumberFormat('es-CO');
+  const cop = (n) => '$' + copFmt.format(Math.round(n));
+  function initPauta(root) {
+    const slider = $('.ps-slider', root);
+    if (!slider) return;
+    const chans = $$('.ps-chan', root);
+    const set = (sel, txt) => { const el = $(sel, root); if (el) el.textContent = txt; };
+    const upd = () => {
+      const X = +slider.value;
+      let N = chans.filter(c => c.classList.contains('activo')).length; if (N < 1) N = 1;
+      const adminPct = N === 1 ? 0.06 : N === 2 ? 0.10 : 0.15;
+      let admin = adminPct * X; const cap = admin > 8e6; if (cap) admin = 8e6;
+      const cardPct = X < 10e6 ? 0.07 : X < 30e6 ? 0.06 : 0.05;
+      const card = cardPct * X;
+      set('.ps-monto', cop(X));
+      set('.ps-medios', cop(X));
+      set('.ps-admin', cop(admin) + (cap ? ' · tope' : ''));
+      set('.ps-adminpct', Math.round(adminPct * 100) + '% · ' + N + (N > 1 ? ' canales' : ' canal'));
+      set('.ps-card', cop(card));
+      set('.ps-cardpct', Math.round(cardPct * 100) + '%');
+      set('.ps-totalv', cop(X + admin + card));
+      const bm = $('.psb-medios', root), ba = $('.psb-admin', root), bc = $('.psb-card', root);
+      if (bm) { bm.style.flexGrow = X / 1e5; ba.style.flexGrow = admin / 1e5; bc.style.flexGrow = card / 1e5; }
+    };
+    slider.addEventListener('input', upd);
+    chans.forEach(c => c.addEventListener('click', (e) => {
+      e.stopPropagation();
+      c.classList.toggle('activo');
+      if (!chans.some(x => x.classList.contains('activo'))) c.classList.add('activo');
+      upd();
+    }));
+    upd();
+  }
+  $$('[data-pauta]').forEach(initPauta);
 
   /* ---------- Inicio ---------- */
   irA(0); irH(0);

@@ -214,6 +214,59 @@ button{font-family:inherit;cursor:pointer;border:none;background:none;color:inhe
 .inv-val{font-size:1.85cqi;font-weight:800;color:#fff;white-space:nowrap}
 .inv-val b{font-size:1.02cqi;font-weight:600;color:var(--gris)}
 
+/* ---------- Simulador de pauta ---------- */
+.pauta-sim{display:flex;gap:4.5cqi;margin-top:3cqi;align-items:center;min-height:40cqi}
+.ps-ctrl,.ps-out{flex:1;min-width:0}
+.ps-field{margin-bottom:2.6cqi}
+.ps-lbl{font-size:1.5cqi;font-weight:800;color:#fff}
+.ps-lbl span{display:block;font-size:1.15cqi;font-weight:500;color:var(--gris-2);margin-top:.3cqi}
+.ps-val{font-size:3.2cqi;font-weight:800;color:var(--verde);margin:1cqi 0}
+.ps-slider{-webkit-appearance:none;appearance:none;width:100%;height:1.2cqi;border-radius:99px;background:linear-gradient(90deg,var(--verde),#1f7a10);outline:none;cursor:pointer}
+.ps-slider::-webkit-slider-thumb{-webkit-appearance:none;width:3.2cqi;height:3.2cqi;border-radius:50%;background:#fff;border:.4cqi solid var(--verde);box-shadow:0 0 1.2cqi rgba(57,255,20,.6);cursor:pointer}
+.ps-slider::-moz-range-thumb{width:3.2cqi;height:3.2cqi;border-radius:50%;background:#fff;border:.4cqi solid var(--verde);cursor:pointer}
+.ps-minmax{display:flex;justify-content:space-between;font-size:1.15cqi;color:var(--gris-2);margin-top:.8cqi}
+.ps-canales{display:flex;gap:1.2cqi;margin-top:1cqi}
+.ps-chan{font-size:1.55cqi;font-weight:700;color:var(--gris);background:var(--tarjeta);border:1px solid var(--linea);border-radius:99px;padding:1.1cqi 2.6cqi;cursor:pointer;transition:background .15s ease,color .15s ease,border-color .15s ease}
+.ps-chan.activo{color:#000;background:var(--verde);border-color:var(--verde)}
+.ps-legend{margin-top:1.8cqi}
+.ps-legend p{font-size:1.15cqi;color:var(--gris-2);line-height:1.5;margin-bottom:.6cqi}
+.ps-legend b{color:var(--gris)}
+.ps-out{background:var(--tarjeta);border:1px solid var(--linea);border-radius:1.8cqi;padding:3cqi}
+.ps-bar{display:flex;height:3cqi;border-radius:99px;overflow:hidden;margin-bottom:2.2cqi;background:#222}
+.ps-bar span{min-width:.6cqi;transition:flex-grow .25s ease}
+.psb-medios{background:#6b7686}.psb-admin{background:var(--verde)}.psb-card{background:#ffcf3a}
+.ps-rows{display:flex;flex-direction:column;gap:1.7cqi}
+.ps-row{display:flex;align-items:center;gap:1.3cqi;font-size:1.6cqi}
+.ps-dot{width:1.5cqi;height:1.5cqi;border-radius:3px;flex:none}
+.ps-dot.medios{background:#6b7686}.ps-dot.admin{background:var(--verde)}.ps-dot.card{background:#ffcf3a}
+.ps-name{flex:1;color:#fff;font-weight:600}
+.ps-name i{font-style:normal;color:var(--gris-2);font-weight:400;font-size:1.25cqi}
+.ps-row em{font-style:normal;color:var(--verde);font-weight:700;font-size:1.35cqi}
+.ps-row b{color:#fff;font-weight:800;white-space:nowrap}
+.ps-total{display:flex;justify-content:space-between;align-items:center;margin-top:2.2cqi;padding-top:1.8cqi;border-top:1px solid var(--linea);font-size:1.9cqi;font-weight:800;color:#fff}
+.ps-total b{color:var(--verde);font-size:2.6cqi}
+.ps-service{margin-top:1.8cqi;font-size:1.25cqi;color:var(--gris-2);line-height:1.45}
+.ps-service .v{color:var(--verde)}
+/* Simulador móvil */
+.ps-mob{display:block;margin-top:.6rem}
+.ps-mob .ps-lbl{font-size:.85rem}
+.ps-mob .ps-lbl span{font-size:.72rem}
+.ps-mob .ps-val{font-size:1.5rem;margin:.35rem 0}
+.ps-mob .ps-field{margin-bottom:1rem}
+.ps-mob .ps-slider{height:7px}
+.ps-mob .ps-slider::-webkit-slider-thumb{width:20px;height:20px;border-width:3px;box-shadow:0 0 6px rgba(57,255,20,.6)}
+.ps-mob .ps-slider::-moz-range-thumb{width:20px;height:20px;border-width:3px}
+.ps-mob .ps-minmax{font-size:.7rem}
+.ps-mob .ps-chan{font-size:.82rem;padding:.5rem 1.1rem}
+.ps-mob .ps-canales{gap:.5rem}
+.ps-mob .ps-bar{height:15px;margin:.9rem 0 .8rem}
+.ps-mob .ps-rows{gap:.5rem}
+.ps-mob .ps-row{font-size:.82rem}
+.ps-mob .ps-dot{width:11px;height:11px}
+.ps-mob .ps-row em{font-size:.72rem}
+.ps-mob .ps-total{font-size:.95rem;margin-top:.8rem;padding-top:.7rem}
+.ps-mob .ps-total b{font-size:1.15rem}
+
 /* ---------- Ejemplos "como en redes": mockup Instagram/Facebook ---------- */
 .redes-split{display:grid;grid-template-columns:auto 1fr;gap:4cqi;align-items:center;margin-top:1.4cqi}
 .ig-post{width:23cqi;font-size:1.02cqi;background:#fff;border-radius:1.2em;overflow:hidden;box-shadow:0 2em 4em rgba(0,0,0,.5);color:#111;line-height:1.4;flex:none}
